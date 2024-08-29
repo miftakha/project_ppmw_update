@@ -86,19 +86,6 @@
         app:layout_constraintTop_toTopOf="@+id/namawarnaing"
         app:layout_constraintVertical_bias="0.100000024" />
 
-    <ImageView
-        android:contentDescription="BLANK"
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/bgwarna"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:contentDescription="sound on"
@@ -141,8 +128,8 @@
                 android:layout_width="165dp"
                 android:layout_height="165dp"
                 android:layout_gravity="center"
-                android:elevation="-10dp"
-                android:background="@drawable/buttonmixcolor" />
+                android:background="@drawable/hitam"
+                android:elevation="-10dp"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -153,7 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="74dp"
         android:layout_marginEnd="74dp"
-        app:cardBackgroundColor="@android:color/white"
+        app:cardBackgroundColor="#D9A470"
         app:cardCornerRadius="28dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,8 +200,10 @@
 
             <Button
                 android:id="@+id/mix"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_gravity="center"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="28dp"
@@ -237,7 +226,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        app:cardBackgroundColor="@android:color/white"
+        app:cardBackgroundColor="#D9A470"
         app:cardCornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -251,48 +240,48 @@
             android:padding="12dp">
 
             <ImageView
-                android:contentDescription="kuning"
                 android:id="@+id/kuning"
-                android:layout_width="50dp"
-                android:layout_height="42dp"
+                android:layout_width="45dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="21dp"
                 android:layout_toStartOf="@id/biru"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/kuning" />
+                android:background="@drawable/kuning"
+                android:contentDescription="kuning" />
 
             <ImageView
-                android:contentDescription="biru blue"
                 android:id="@+id/biru"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_toStartOf="@id/merah"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/biru" />
+                android:layout_toStartOf="@id/merah"
+                android:background="@drawable/biru"
+                android:contentDescription="biru blue" />
 
             <ImageView
-                android:contentDescription="merah"
                 android:id="@+id/merah"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/merah" />
+                android:background="@drawable/merah"
+                android:contentDescription="merah" />
 
             <ImageView
-                android:contentDescription="hitam"
                 android:id="@+id/hitam"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_toEndOf="@id/merah"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/hitam" />
+                android:layout_toEndOf="@id/merah"
+                android:background="@drawable/hitam"
+                android:contentDescription="hitam" />
 
             <ImageView
-                android:contentDescription="putih"
                 android:id="@+id/putih"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_toEndOf="@id/hitam"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/putih" />
+                android:layout_toEndOf="@id/hitam"
+                android:background="@drawable/putih"
+                android:contentDescription="putih" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

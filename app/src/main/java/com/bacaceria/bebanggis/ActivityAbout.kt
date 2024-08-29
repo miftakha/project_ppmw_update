@@ -1,4 +1,4 @@
-package com.bacaceria.bebanggis
+package com.example.bebanggis
 
 import android.app.Dialog
 import android.content.ActivityNotFoundException
@@ -9,7 +9,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_about.*
+import com.bacaceria.bebanggis.R
+import com.bacaceria.bebanggis.databinding.ActivityAboutBinding
 
 
 class ActivityAbout : AppCompatActivity() {
@@ -47,12 +48,56 @@ class ActivityAbout : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
+        val binding = ActivityAboutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         popUpDetail = Dialog(this)
         popupdonate = Dialog(this)
 
-        button_back.setOnClickListener {
+        binding.buttonBack.setOnClickListener {
             finish()
             overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left)
+        }
+
+        binding.profilesadam.setOnClickListener {
+            nama = "Shaddam Amru Hasibuan"
+            photo = "sadam"
+            profesi = "Designer"
+            desc =
+                "Saya adalah seorang desainer asal kota kecil Cimahi yang tertarik untuk belajar dan meng-explore hal baru demi meningkatkan skill saya"
+            kerja = "bh"
+            link1 = "https://www.linkedin.com/in/shaddamah/"
+            link2 = "https://www.behance.net/shaddzgn"
+            link3 = "https://github.com/shaddamah"
+            link4 = "https://instagram.com/shaddamah?igshid=19vo8nv0rio7a"
+            kontak = "shaddam.a.h@gmail.com"
+            dialog()
+        }
+        binding.profiledeka.setOnClickListener {
+            nama = "Adrian Daniel"
+            photo = "deka"
+            profesi = "Programmer"
+            desc =
+                "Saya adalah seorang android developers yang ingin terus belajar hal - hal baru untuk terus mengasah skill saya"
+            kerja = "fb"
+            link1 = "https://www.linkedin.com/in/adrian-daniel-23a0ba1a1/"
+            link2 = "https://wa.me/+628818117213"
+            link3 = "https://github.com/adriandk"
+            link4 = "https://www.instagram.com/adriandk_/?hl=en"
+            kontak = "adriandaniel1803@gmail.com"
+            dialog()
+        }
+
+        binding.donate.setOnClickListener {
+            popupdonate.setContentView(R.layout.helpdialog)
+            textdonate = popupdonate.findViewById(R.id.help)
+            xButton = popupdonate.findViewById(R.id.button_xhelp)
+            xButton.setOnClickListener {
+                popupdonate.dismiss()
+            }
+            textdonate.text = "Kamu bisa menghubungi developer untuk berdonasi (kontak bisa ditemukan di Profil developer diatas)"
+            popupdonate.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            popupdonate.show()
         }
     }
 

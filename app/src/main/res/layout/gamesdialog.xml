@@ -39,11 +39,11 @@
                 android:textAllCaps="false"
                 android:background="@drawable/buttonpurple"
                 android:fontFamily="@font/berlinlight"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:textSize="28sp"/>
 
             <Button
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 style="?android:attr/borderlessButtonStyle"
                 android:id="@+id/button_mixcolor"
                 android:layout_below="@id/button_quiz"
@@ -59,8 +59,8 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:textColor="@color/colorPrimaryDark"
+    <TextView
+        android:textColor="@color/white"
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
@@ -69,6 +69,8 @@
         android:clickable="false"
         android:fontFamily="@font/berlinlight"
         android:text="games"
+        android:elevation="10dp"
+        android:gravity="center"
         android:textAllCaps="false"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView3"

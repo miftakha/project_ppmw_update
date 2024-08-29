@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -42,6 +44,41 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/textViewPencipta"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/berlinsans"
+            android:gravity="center_vertical"
+            android:text="Pencipta"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/berlinsans"
+            android:gravity="center_vertical"
+            android:text="Publisher"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="1.0" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -78,7 +115,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="105dp"
                             android:layout_marginTop="18dp"
-                            android:src="@drawable/zulkifarfahri" />
+                            android:src="@drawable/potoaing" />
 
                         <TextView
                             android:id="@+id/namadev1"
@@ -88,7 +125,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/berlinlight"
                             android:gravity="center"
-                            android:text="Fahri Hamdi dan Zulkifar"
+                            android:text="Shaddam Amru"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="18sp" />
 
@@ -115,6 +152,26 @@
                             android:text="Designer"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="22sp" />
+
+                        <Button
+                            android:id="@+id/profilesadam"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="11dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="9dp"
+                            android:background="@drawable/buttonred"
+                            android:fontFamily="@font/berlinlight"
+                            android:text="@string/profile"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -143,7 +200,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="105dp"
                             android:layout_marginTop="18dp"
-                            android:src="@drawable/dimasmiftahul"/>
+                            android:src="@drawable/adrian"/>
 
                         <TextView
                             android:id="@+id/namadev2"
@@ -153,7 +210,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/berlinlight"
                             android:gravity="center"
-                            android:text="Dimas Anggoro Sakti dan Miftahul Khair"
+                            android:text="Adrian Daniel"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="18sp" />
 
@@ -181,10 +238,356 @@
                             android:text="Programmer"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/profiledeka"
+                            android:gravity="center"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/buttonred"
+                            android:fontFamily="@font/berlinlight"
+                            android:text="@string/profile"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="34dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/gambarnya3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="105dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/fahri" />
+
+                        <TextView
+                            android:id="@+id/namadev3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gambarnya3"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="Fahri Hamdi"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/descabout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/namadev3"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="sebagai"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/design3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/descabout3"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/berlinsans"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="Designer"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="22sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="34dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/gambarnya4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="105dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/foto_default" />
+
+                        <TextView
+                            android:id="@+id/namadev4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gambarnya4"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="Miftahul Khair"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/descabout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/namadev4"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="sebagai"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/design4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/descabout4"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="42dp"
+                            android:fontFamily="@font/berlinsans"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="Programmer"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="34dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/gambarnya5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="105dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/desain_tanpa_judul__3_" />
+
+                        <TextView
+                            android:id="@+id/namadev5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gambarnya5"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="Zulkifar Rangkuty"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/descabout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/namadev5"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="sebagai"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/design5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/descabout5"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/berlinsans"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="Designer"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="22sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="34dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/gambarnya6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="105dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/dimas" />
+
+                        <TextView
+                            android:id="@+id/namadev6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gambarnya6"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="Dimas Anggoro Sakti"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/descabout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/namadev6"
+                            android:fontFamily="@font/berlinlight"
+                            android:gravity="center"
+                            android:text="sebagai"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/design6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/descabout6"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="42dp"
+                            android:fontFamily="@font/berlinsans"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="Programmer"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:layout_editor_absoluteX="16dp">
+
+            <TextView
+                android:id="@+id/textViewdonasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/berlinsans"
+                android:text="@string/belikan_kami_secangkir_kopi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/donate"
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/buttonorange"
+                android:fontFamily="@font/berlinlight"
+                android:stateListAnimator="@null"
+                android:text="@string/donasi"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.0" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

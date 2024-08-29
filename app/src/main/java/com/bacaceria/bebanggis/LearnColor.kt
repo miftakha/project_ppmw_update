@@ -8,11 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_games_color.*
-import kotlinx.android.synthetic.main.activity_learn_alfabeth.*
-import kotlinx.android.synthetic.main.activity_learn_alfabeth.buttonback
-import kotlinx.android.synthetic.main.activity_learn_color.*
-import kotlinx.android.synthetic.main.activity_learn_color.button_help
+import com.bacaceria.bebanggis.databinding.ActivityLearnColorBinding
 
 class LearnColor : AppCompatActivity() {
 
@@ -25,73 +21,76 @@ class LearnColor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn_color)
 
+        val binding = ActivityLearnColorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         popup = Dialog(this)
 
-        buttonback.setOnClickListener {
-            onBackPressed()
+        binding.buttonback.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
 
-        cardView4.setOnClickListener {
+        binding.cardView4.setOnClickListener {
             color = "Green"
             soundOn()
         }
 
-        cardviewMerah.setOnClickListener {
+        binding.red.setOnClickListener {
             color = "Red"
             soundOn()
         }
 
-        blue.setOnClickListener {
+        binding.blue.setOnClickListener {
             color = "Blue"
             soundOn()
         }
 
-        yellow.setOnClickListener {
+        binding.yellow.setOnClickListener {
             color = "Yellow"
             soundOn()
         }
 
-        green.setOnClickListener {
+        binding.green.setOnClickListener {
             color = "Green"
             soundOn()
         }
 
-        kuaci.setOnClickListener {
+        binding.kuaci.setOnClickListener {
             color = "Yellow"
             soundOn()
         }
 
-        imageView3.setOnClickListener {
+        binding.imageView3.setOnClickListener {
             color = "Red"
             soundOn()
         }
 
-        imageView5.setOnClickListener {
+        binding.imageView5.setOnClickListener {
             color = "Blue"
             soundOn()
         }
 
-        soundblue.setOnClickListener {
+        binding.soundblue.setOnClickListener {
             color = "Blue"
             soundOn()
         }
 
-        soundgreen.setOnClickListener {
+        binding.soundgreen.setOnClickListener {
             color = "Green"
             soundOn()
         }
 
-        soundred.setOnClickListener {
+        binding.soundred.setOnClickListener {
             color = "Red"
             soundOn()
         }
 
-        soundyellow.setOnClickListener {
+        binding.soundyellow.setOnClickListener {
             color = "Yellow"
             soundOn()
         }
 
-        button_help.setOnClickListener {
+        binding.buttonHelp.setOnClickListener {
             popup.setContentView(R.layout.helpdialog)
             popupbutton= popup.findViewById(R.id.button_xhelp)
             popuptext= popup.findViewById(R.id.help)

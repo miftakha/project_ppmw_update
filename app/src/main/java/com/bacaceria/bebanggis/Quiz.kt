@@ -9,9 +9,11 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_quiz.*
+import androidx.core.content.ContextCompat
+import com.bacaceria.bebanggis.databinding.ActivityQuizBinding
 
 class Quiz : AppCompatActivity() {
+    lateinit var binding: ActivityQuizBinding
 
     lateinit var dialog : Dialog
     lateinit var buttonYes : Button
@@ -50,7 +52,7 @@ class Quiz : AppCompatActivity() {
         "White and Black",
         "Mobil",
         "Red and White",
-        "Lumba - Lumba"
+        "Lumba - lumba"
     )
     var opt = arrayOf(
         "Red", "Black", "Pink", "Orange",
@@ -58,15 +60,15 @@ class Quiz : AppCompatActivity() {
         "Carrot", "Caarot", "Carot", "Caroot",
         "Green", "Black", "Brown", "Orange",
         "Xylophone", "Xilophone", "Xilofone", "Xylofone",
-        "White & Blue", "Blue & Red", "Blue & Yellow", "Yellow & Red",
+        "White and Blue", "Blue and Red", "Blue and Yellow", "Yellow and Red",
         "Mango", "Carrot", "Banana", "Apple",
         "Yellow", "Black", "Red", "White",
         "Red", "Yellow", "Green", "White",
         "Blue", "Yellow", "Red", "Purple",
         "Kol", "Wortel", "Buncis", "Brokoli",
-        "White & Black", "Black & Red", "Black & Grey", "White & Blue",
+        "White and Black", "Black and Red", "Black and Grey", "White and Blue",
         "Mobil", "Motor", "Pesawat", "Perahu",
-        "Blue & Red", "Red & Black", "White & Blue", "Red & White",
+        "Blue and Red", "Red and Black", "White and Blue", "Red and White",
         "Kucing", "Lumba - lumba", "Jerapah", "Gajah"
     )
 
@@ -80,96 +82,99 @@ class Quiz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        val binding = ActivityQuizBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         dialog = Dialog(this)
 
         val level = intent.getStringExtra("Level").toString()
         if (level == "1"){
-            nomorlevel.text = "/5"
+            binding.nomorlevel.text = "/5"
         }
         else if (level == "2"){
-            nomorlevel.text = "/10"
+            binding.nomorlevel.text = "/10"
         }
         else {
-            nomorlevel.text = "/15"
+            binding.nomorlevel.text = "/15"
         }
-        textView7.text = no.toString()
+        binding.textView7.text = no.toString()
 
-        soal.text = questions[flag]
-        option_a.text = opt[0]
-        option_b.text = opt[1]
-        option_c.text = opt[2]
-        option_d.text = opt[3]
+        binding.soal.text = questions[flag]
+        binding.optionA.text = opt[0]
+        binding.optionB.text = opt[1]
+        binding.optionC.text = opt[2]
+        binding.optionD.text = opt[3]
 
-        buttonjawab_a.setOnClickListener {
-            ans = option_a.text.toString()
-            buttona.setBackgroundResource(R.drawable.circlegreen)
-            buttona.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+        binding.buttonjawabA.setOnClickListener {
+            ans = binding.optionA.text.toString()
+            binding.buttona.setBackgroundResource(R.drawable.circlegreen)
+            binding.buttona.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //
-            buttonb.setBackgroundResource(R.drawable.circlepurple)
-            buttonb.setTextColor(resources.getColor(R.color.white))
+            binding.buttonb.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonb.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttonc.setBackgroundResource(R.drawable.circlepurple)
-            buttonc.setTextColor(resources.getColor(R.color.white))
+            binding.buttonc.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonc.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttond.setBackgroundResource(R.drawable.circlepurple)
-            buttond.setTextColor(resources.getColor(R.color.white))
+            binding.buttond.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttond.setTextColor(ContextCompat.getColor(this, R.color.white))
         }
-        buttonjawab_b.setOnClickListener {
-            ans = option_b.text.toString()
+        binding.buttonjawabB.setOnClickListener {
+            ans = binding.optionB.text.toString()
 
-            buttonb.setBackgroundResource(R.drawable.circlegreen)
-            buttonb.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+            binding.buttonb.setBackgroundResource(R.drawable.circlegreen)
+            binding.buttonb.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //
-            buttona.setBackgroundResource(R.drawable.circlepurple)
-            buttona.setTextColor(resources.getColor(R.color.white))
+            binding.buttona.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttona.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttonc.setBackgroundResource(R.drawable.circlepurple)
-            buttonc.setTextColor(resources.getColor(R.color.white))
+            binding.buttonc.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonc.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttond.setBackgroundResource(R.drawable.circlepurple)
-            buttond.setTextColor(resources.getColor(R.color.white))
+            binding.buttond.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttond.setTextColor(ContextCompat.getColor(this, R.color.white))
         }
-        buttonjawab_c.setOnClickListener {
-            ans = option_c.text.toString()
+        binding.buttonjawabC.setOnClickListener {
+            ans = binding.optionC.text.toString()
 
-            buttonc.setBackgroundResource(R.drawable.circlegreen)
-            buttonc.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+            binding.buttonc.setBackgroundResource(R.drawable.circlegreen)
+            binding.buttonc.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //
-            buttonb.setBackgroundResource(R.drawable.circlepurple)
-            buttonb.setTextColor(resources.getColor(R.color.white))
+            binding.buttonb.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonb.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttona.setBackgroundResource(R.drawable.circlepurple)
-            buttona.setTextColor(resources.getColor(R.color.white))
+            binding.buttona.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttona.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttond.setBackgroundResource(R.drawable.circlepurple)
-            buttond.setTextColor(resources.getColor(R.color.white))
+            binding.buttond.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttond.setTextColor(ContextCompat.getColor(this, R.color.white))
         }
-        buttonjawab_d.setOnClickListener {
-            ans = option_d.text.toString()
+        binding.buttonjawabD.setOnClickListener {
+            ans = binding.optionD.text.toString()
 
-            buttond.setBackgroundResource(R.drawable.circlegreen)
-            buttond.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+            binding.buttond.setBackgroundResource(R.drawable.circlegreen)
+            binding.buttond.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //
-            buttonb.setBackgroundResource(R.drawable.circlepurple)
-            buttonb.setTextColor(resources.getColor(R.color.white))
+            binding.buttonb.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonb.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttonc.setBackgroundResource(R.drawable.circlepurple)
-            buttonc.setTextColor(resources.getColor(R.color.white))
+            binding.buttonc.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttonc.setTextColor(ContextCompat.getColor(this, R.color.white))
 
-            buttona.setBackgroundResource(R.drawable.circlepurple)
-            buttona.setTextColor(resources.getColor(R.color.white))
+            binding.buttona.setBackgroundResource(R.drawable.circlepurple)
+            binding.buttona.setTextColor(ContextCompat.getColor(this, R.color.white))
         }
 
-        buttonback.setOnClickListener {
+        binding.buttonback.setOnClickListener {
             onBackPressed()
         }
 
-        next.setOnClickListener {
+        binding.next.setOnClickListener {
             if (ans == ""){
                 Toast.makeText(this, "SELECT ONE BUTTON", Toast.LENGTH_SHORT).show()
             }
             else if (ans == answers[flag]){
-                correct++
+                correct = correct+1
             }
 
             if (ans != ""){
@@ -199,31 +204,27 @@ class Quiz : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 } else {
-                    soal.text = questions[flag]
-                    option_a.text = opt[flag*4]
-                    option_b.text = opt[flag*4+1]
-                    option_c.text = opt[flag*4+2]
-                    option_d.text = opt[flag*4+3]
-                    textView7.text = no++.toString()
-                    clear()
+                    binding.soal.text = questions[flag]
+                    binding.optionA.text = opt[flag*4]
+                    binding.optionB.text = opt[flag*4+1]
+                    binding.optionC.text = opt[flag*4+2]
+                    binding.optionD.text = opt[flag*4+3]
+                    binding.textView7.text = no++.toString()
+                    binding.buttona.setBackgroundResource(R.drawable.circlepurple)
+                    binding.buttona.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+                    binding.buttonb.setBackgroundResource(R.drawable.circlepurple)
+                    binding.buttonb.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+                    binding.buttonc.setBackgroundResource(R.drawable.circlepurple)
+                    binding.buttonc.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+                    binding.buttond.setBackgroundResource(R.drawable.circlepurple)
+                    binding.buttond.setTextColor(ContextCompat.getColor(this, R.color.white))
                 }
             }
         }
 
-    }
-
-    fun clear(){
-        buttona.setBackgroundResource(R.drawable.circlepurple)
-        buttona.setTextColor(resources.getColor(R.color.white))
-//
-        buttonb.setBackgroundResource(R.drawable.circlepurple)
-        buttonb.setTextColor(resources.getColor(R.color.white))
-
-        buttonc.setBackgroundResource(R.drawable.circlepurple)
-        buttonc.setTextColor(resources.getColor(R.color.white))
-
-        buttond.setBackgroundResource(R.drawable.circlepurple)
-        buttond.setTextColor(resources.getColor(R.color.white))
     }
 
     override fun onBackPressed() {

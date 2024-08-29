@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="8dp"
         tools:context=".LearnColor">
 
@@ -71,6 +71,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageView
+                android:contentDescription="green"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
@@ -87,7 +88,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/buttonsoundwarna"
+                    android:background="@drawable/buttonforexitpopup"
                     android:src="@drawable/soundgreen"
                     android:elevation="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -104,8 +105,8 @@
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/berlinsans"
                     android:text="Green"
-                    android:textColor="@color/green"
-                    android:textSize="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -117,8 +118,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/berlinlight"
                     android:text="hijau"
-                    android:textColor="@android:color/white"
-                    android:textSize="26dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +130,8 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:contentDescription="green"
+            android:elevation="-10dp"
+            android:contentDescription="@null"
             android:id="@+id/green"
             android:layout_width="240dp"
             android:layout_height="220dp"
@@ -142,9 +144,9 @@
             app:layout_constraintStart_toEndOf="@+id/cardView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0" />
-<!---->
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardviewMerah"
+            android:id="@+id/red"
             android:layout_width="200dp"
             android:layout_height="170dp"
             android:layout_marginTop="32dp"
@@ -158,6 +160,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageView
+                android:contentDescription="red"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
@@ -174,7 +177,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/buttonsoundwarna"
+                    android:background="@drawable/buttonforexitpopup"
                     android:src="@drawable/soundred"
                     android:elevation="5dp"
                     android:foregroundTint="@android:color/holo_red_light"
@@ -192,8 +195,8 @@
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/berlinsans"
                     android:text="Red"
-                    android:textColor="@color/red"
-                    android:textSize="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -205,8 +208,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/berlinlight"
                     android:text="merah"
-                    android:textColor="@android:color/white"
-                    android:textSize="26dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +220,8 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:contentDescription="red"
+            android:elevation="-10dp"
+            android:contentDescription="@null"
             android:id="@+id/imageView3"
             android:layout_width="240dp"
             android:layout_height="200dp"
@@ -225,12 +229,12 @@
             android:scaleType="fitXY"
             android:src="@mipmap/redsound"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cardviewMerah"
+            app:layout_constraintEnd_toStartOf="@+id/red"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView4"
             app:layout_constraintVertical_bias="0.0" />
-<!---->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/blue"
             android:layout_width="200dp"
@@ -247,6 +251,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageView
+                android:contentDescription="blue"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
@@ -263,7 +268,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/buttonsoundwarna"
+                    android:background="@drawable/buttonforexitpopup"
                     android:src="@drawable/soundblue"
                     android:foregroundTint="@android:color/holo_blue_dark"
                     android:elevation="5dp"
@@ -278,11 +283,11 @@
                     android:id="@+id/textBlue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="38dp"
+                    android:layout_marginTop="38sp"
                     android:fontFamily="@font/berlinsans"
                     android:text="Blue"
-                    android:textColor="@color/blue"
-                    android:textSize="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -294,8 +299,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/berlinlight"
                     android:text="biru"
-                    android:textColor="@android:color/white"
-                    android:textSize="26dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -306,7 +311,8 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:contentDescription="blue"
+            android:elevation="-10dp"
+            android:contentDescription="@null"
             android:id="@+id/imageView5"
             android:layout_width="240dp"
             android:layout_height="220dp"
@@ -318,13 +324,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/blue"
-            app:layout_constraintTop_toBottomOf="@+id/cardviewMerah"
+            app:layout_constraintTop_toBottomOf="@+id/red"
             app:layout_constraintVertical_bias="0.0" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/yellow"
-            android:layout_width="200dp"
-            android:layout_height="170dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
@@ -337,14 +343,15 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:contentDescription="yellow"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
                 android:scaleType="fitXY"
                 android:background="@drawable/backgroundyellow"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageButton
                     android:contentDescription="sound on yellow"
@@ -353,7 +360,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/buttonsoundwarna"
+                    android:background="@drawable/circlelinkedin"
                     android:src="@drawable/soundonbutton"
                     android:foregroundTint="@color/colorDonate"
                     android:elevation="5dp"
@@ -368,11 +375,12 @@
                     android:id="@+id/textYellow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="38dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="28dp"
                     android:fontFamily="@font/berlinsans"
                     android:text="Yellow"
-                    android:textColor="@color/yellow"
-                    android:textSize="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -384,8 +392,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/berlinlight"
                     android:text="Kuning"
-                    android:textColor="@android:color/white"
-                    android:textSize="26dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -396,7 +406,8 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:contentDescription="yellow"
+            android:elevation="-10dp"
+            android:contentDescription="@null"
             android:id="@+id/kuaci"
             android:layout_width="240dp"
             android:layout_height="220dp"

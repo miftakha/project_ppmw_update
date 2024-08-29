@@ -78,7 +78,7 @@
         android:layout_marginStart="64dp"
         android:fontFamily="@font/berlinlight"
         android:text=""
-        android:textColor="@color/textgreen"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/scrollview"
@@ -146,7 +146,7 @@
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/berlinsans"
                 android:text="A"
-                android:textSize="22sp" />
+                android:textSize="22sp"/>
 
             <Button
                 android:stateListAnimator="@null"

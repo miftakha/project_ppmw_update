@@ -10,7 +10,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_home.*
+import com.bacaceria.bebanggis.databinding.ActivityHomeBinding
+import com.example.bebanggis.ActivityAbout
 
 class HomeActivity : AppCompatActivity() {
 
@@ -24,15 +25,18 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        val binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         epicDialog = Dialog(this)
 
-        buttonabout.setOnClickListener {
+        binding.buttonabout.setOnClickListener {
             val pindah = Intent(this, ActivityAbout::class.java)
             startActivity(pindah)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        buttonlearn.setOnClickListener {
+        binding.buttonlearn.setOnClickListener {
             epicDialog.setContentView(R.layout.learndialog)
             btnxPopUP = epicDialog.findViewById(R.id.button_xlearn)
 
@@ -59,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
             epicDialog.show()
         }
 
-        button_help.setOnClickListener {
+        binding.buttonHelp.setOnClickListener {
             epicDialog.setContentView(R.layout.helpdialog)
             btnxPopUP = epicDialog.findViewById(R.id.button_xhelp)
             helptext = epicDialog.findViewById(R.id.help)
@@ -78,7 +82,7 @@ class HomeActivity : AppCompatActivity() {
             epicDialog.show()
         }
 
-        buttongames.setOnClickListener {
+        binding.buttongames.setOnClickListener {
             epicDialog.setContentView(R.layout.gamesdialog)
             btnxPopUP = epicDialog.findViewById(R.id.button_xgames)
 

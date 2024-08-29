@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.bacaceria.bebanggis">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -13,48 +12,39 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="com.bacaceria.bebanggis.ActivityAbout"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:name="com.example.bebanggis.ActivityAbout"
+            android:exported="true"/>
 
         <activity
             android:name="com.bacaceria.bebanggis.Result"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.Quiz"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.GamesColor"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.GamesQuiz"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.LearnColor"
-            android:screenOrientation="nosensor"
             android:exported="false" />
 
         <activity
             android:name="com.bacaceria.bebanggis.LearnAlfabeth"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.HomeActivity"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name="com.bacaceria.bebanggis.MainActivity"
-            android:screenOrientation="nosensor"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
